@@ -2,10 +2,7 @@ var buttonTranslate = document.querySelector("#btn-trans");
 var textInput = document.querySelector("#txt-input");
 var textOutput = document.querySelector("#txt-output");
 var serverURL = "https://api.funtranslations.com/translate/shakespeare.json";
-
-function getTranslationURL(text) {
-    return serverURL + "?" + "text=" + text
-}
+var getTranslationURL =  serverURL + "?" + "text=" + textInput.value    // SIMPLIFIED IT WITHOUT USING FUNCTION
 
 function errorHandler(error) {
     console.log("Error occured", error);
@@ -13,7 +10,7 @@ function errorHandler(error) {
 }
 
 function clickHandler() {
-    fetch(getTranslationURL(textInput.value))
+    fetch(getTranslationURL)
         .then(response => response.json())
         .then(json => {
             var translatedText = json.contents.translated;
