@@ -57,4 +57,17 @@ p{
 
 footer{
     height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   margin-top: 50px;
+}
+footer p{
+    font-size: 1.8rem;
+    padding: 20px 5px;
+}
+footer img{
+    width: 30px;
+    display: inline-block;
+    padding: 0px 30px;
 }
